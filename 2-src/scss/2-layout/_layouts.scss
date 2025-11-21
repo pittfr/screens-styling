@@ -1,0 +1,14 @@
+.container {
+    height: 100dvh;
+    padding: 70px 0 70px 150px;
+    background-color: var(--color-secondary-lightest);
+    border-radius: 51px;
+    overflow-y: auto;
+    z-index: 0;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 48px;
+    }
+}
