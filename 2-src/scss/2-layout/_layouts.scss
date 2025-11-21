@@ -4,7 +4,7 @@
     left: 0;
     width: calc(100% - 404px);
     height: 100%;
-    padding: 70px 0 70px 157px;
+    padding: 70px 28px 70px 149px;
     background-color: var(--color-secondary-lightest);
     border-radius: 51px;
     overflow-y: auto;
@@ -13,7 +13,7 @@
     &__header {
         display: flex;
         justify-content: space-between;
-        margin-right: 48px;
+        margin: 0 var(--space-m) calc(var(--space-l) + 2px) var(--space-s);
     }
 }
 
