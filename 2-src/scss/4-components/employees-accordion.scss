@@ -81,7 +81,7 @@
                     > :first-child {
                         width: 50px;
                         text-align: center;
-                        padding: 6px 0px;
+                        padding: 6px var(--space-none);
                         border-radius: var(--border-radius-rounded);
                         font-size: var(--font-size-xs);
                         transition: color 0.3s ease-in-out,
@@ -131,13 +131,13 @@
             &--is-open {
                 border-color: var(--color-neutral-2);
                 > .osui-accordion-item__title {
-                    font-weight: unset;
+                    font-weight: 500;
                     background-color: var(--color-neutral-3);
                     box-shadow: var(--shadow-xs);
                 }
 
                 &::after {
-                    border-color: transparent;
+                    border: var(--border-size-none);
                 }
 
                 .osui-accordion-item__title__placeholder
