@@ -7,13 +7,17 @@
         color: var(--color-neutral-9);
         padding-left: var(--space-base);
         padding-right: calc(var(--space-l) - 6px);
+        max-height: var(--space-xl);
+        opacity: 1;
+        overflow: hidden;
+        transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
 
         .btn {
             background-color: transparent;
-            border: 0;
+            border: var(--border-size-none);
             color: inherit;
             font-weight: var(--font-regular);
-            padding: 0;
+            padding: var(--space-none);
         }
 
         > :nth-child(1),
@@ -27,14 +31,14 @@
         }
     }
 
-    .list {
+    .items {
         display: flex;
         flex-flow: column nowrap;
-        gap: 8px;
+        gap: var(--space-s);
         overflow-y: auto;
 
         .osui-accordion-item {
-            border-width: 0px;
+            border-width: var(--border-size-none);
             border-radius: 16px;
             box-shadow: var(--shadow-xs);
             overflow: hidden;
@@ -46,10 +50,6 @@
                     box-shadow 0.3s ease-in-out;
                 border-radius: 16px;
                 padding: var(--space-base);
-            }
-
-            &__content {
-                background: var(--color-neutral-0);
             }
 
             &__title__placeholder {
@@ -99,6 +99,10 @@
                         }
                     }
                 }
+            }
+
+            &__content {
+                background: var(--color-neutral-0);
             }
 
             .accordion-inner-wrapper {
@@ -157,6 +161,125 @@
             &--is-closed {
                 .osui-accordion-item__icon--caret {
                     color: var(--color-neutral-10);
+                }
+            }
+        }
+    }
+}
+
+.tablet,
+.phone {
+    .employees-accordion {
+        .sorting {
+            opacity: 0;
+            max-height: var(--space-none);
+            cursor: default;
+            pointer-events: none;
+        }
+        .items {
+            .osui-accordion-item {
+                &__title__placeholder {
+                    display: grid;
+                    grid-template-areas: "image name city state actions";
+                    grid-template-columns: auto repeat(3, 1fr) auto;
+                    justify-content: flex-start;
+                    font-weight: 500;
+
+                    > :nth-child(1),
+                    > :nth-child(2),
+                    > :nth-child(3),
+                    > :nth-child(4) {
+                        max-width: unset;
+                        width: unset;
+                    }
+
+                    > :nth-child(1) {
+                        display: contents;
+                    }
+
+                    .employee-picture {
+                        grid-area: image;
+                        width: var(--space-xl);
+                        height: var(--space-xl);
+                        margin-right: var(--space-base);
+                    }
+
+                    > :nth-child(1) > :nth-child(2) {
+                        grid-area: name;
+                        font-weight: var(--font-bold);
+                    }
+
+                    > :nth-child(2) {
+                        grid-area: state;
+                    }
+
+                    > :nth-child(3) {
+                        grid-area: city;
+                    }
+
+                    > :nth-child(4) {
+                        grid-area: actions;
+                        justify-self: end;
+                        margin-right: var(--space-base);
+                    }
+
+                    > :nth-child(2)::before,
+                    > :nth-child(3)::before {
+                        font-weight: var(--font-semi-bold);
+                    }
+
+                    > :nth-child(2)::before {
+                        content: "State: ";
+                    }
+
+                    > :nth-child(3)::before {
+                        content: "City: ";
+                    }
+                }
+            }
+        }
+    }
+}
+
+.phone {
+    .employees-accordion {
+        .items {
+            .osui-accordion-item {
+                &__title__placeholder {
+                    display: grid;
+                    grid-template-areas:
+                        "image name actions"
+                        "image city actions"
+                        "image state actions";
+                    grid-template-columns: auto 1fr auto;
+
+                    > :nth-child(1) > :nth-child(2) {
+                        margin-bottom: var(--space-s);
+                    }
+
+                    > :nth-child(3) {
+                        margin-bottom: var(--space-xs);
+                    }
+
+                    > :nth-child(1) {
+                        font-weight: var(--font-semi-bold);
+                    }
+
+                    > :nth-child(2),
+                    > :nth-child(3) {
+                        font-size: var(--font-size-xs);
+                    }
+                }
+
+                .accordion-inner-wrapper {
+                    flex-flow: column nowrap;
+                    gap: 26px;
+
+                    > :nth-child(1),
+                    > :nth-child(2) {
+                        width: 100%;
+                        max-width: unset;
+                    }
                 }
             }
         }
