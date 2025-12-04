@@ -4,13 +4,13 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: calc(100% - 404px);
+        width: calc(100% - 390px);
         height: 100%;
         padding: 70px var(--space-xl) 70px 149px;
         background-color: var(--color-secondary-lightest);
         border-radius: 51px;
         overflow-y: auto;
-        z-index: 0;
+        z-index: 1;
         transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out,
             padding 0.3s ease-in-out;
 
