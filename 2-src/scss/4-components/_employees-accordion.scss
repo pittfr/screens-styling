@@ -228,6 +228,10 @@
                         font-weight: var(--font-semi-bold);
                     }
 
+                    > :nth-child(1) > :nth-child(2)::before {
+                        content: "Name: ";
+                    }
+
                     > :nth-child(2)::before {
                         content: "State: ";
                     }
