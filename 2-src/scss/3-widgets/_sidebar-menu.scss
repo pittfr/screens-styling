@@ -1,0 +1,16 @@
+.sidebar-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-primary);
+    color: var(--color-neutral-0);
+    z-index: 1;
+    border-radius: 0 24px 24px 0;
+}
+
+.tablet,
+.phone {
+    .sidebar-menu {
+        transform: translateX(-112px);
+    }
+}
