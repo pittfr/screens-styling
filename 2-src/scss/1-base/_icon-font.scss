@@ -26,6 +26,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cross:before {
+    content: "\e92b";
+}
 .icon-burger:before {
     content: "\e92a";
 }

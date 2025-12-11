@@ -13,10 +13,6 @@
         transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out,
             padding 0.3s ease-in-out;
 
-        &.sidebar-info--collapsed {
-            width: 100%;
-        }
-
         .scrollable-content {
             width: 100%;
             height: 100%;
@@ -100,6 +96,12 @@
             }
         }
     }
+
+    &.sidebar-info--collapsed {
+        .screen-content {
+            width: 100%;
+        }
+    }
 }
 
 .tablet,
@@ -107,11 +109,12 @@
     .layout-screen {
         .screen-content {
             width: 100%;
+            height: calc(100% - 70px);
+            margin-top: 70px;
             border-radius: var(--border-radius-none);
 
             .scrollable-content {
                 padding: 30px var(--space-base) 70px;
-                margin-top: 70px;
 
                 .search-controls {
                     flex-flow: column nowrap;
