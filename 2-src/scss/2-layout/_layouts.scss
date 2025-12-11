@@ -110,8 +110,8 @@
             border-radius: var(--border-radius-none);
 
             .scrollable-content {
-                padding-left: var(--space-base);
-                padding-right: var(--space-base);
+                padding: 30px var(--space-base) 70px;
+                margin-top: 70px;
 
                 .search-controls {
                     flex-flow: column nowrap;
