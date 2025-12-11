@@ -20,6 +20,11 @@
             font-size: 30px;
         }
 
+        .app-logo {
+            max-width: 0%;
+            transition: max-width 0.3s ease-in-out;
+        }
+
         .sidebar-menu__toggle-btn {
             display: flex;
             justify-content: center;
@@ -102,6 +107,9 @@
 
     &.sidebar-menu--expanded {
         .osui-sidebar__header {
+            .app-logo {
+                max-width: 100%;
+            }
             .sidebar-menu__toggle-btn {
                 transform: rotate(-180deg);
             }
