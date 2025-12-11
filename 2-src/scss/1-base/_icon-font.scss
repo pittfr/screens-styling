@@ -26,23 +26,26 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-burger:before {
+    content: "\e92a";
+}
 .icon-logo .path1:before {
     content: "\e921";
     color: rgb(250, 149, 227);
 }
 .icon-logo .path2:before {
     content: "\e926";
-    margin-left: -1.2001953125em;
+    margin-left: -1.1875em;
     color: rgb(253, 231, 248);
 }
 .icon-logo .path3:before {
     content: "\e927";
-    margin-left: -1.2001953125em;
+    margin-left: -1.1875em;
     color: rgb(255, 189, 241);
 }
 .icon-logo .path4:before {
     content: "\e928";
-    margin-left: -1.2001953125em;
+    margin-left: -1.1875em;
     color: rgb(84, 19, 107);
 }
 .icon-unsorted-lines:before {
