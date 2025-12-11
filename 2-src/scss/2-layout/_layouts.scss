@@ -16,7 +16,7 @@
         .scrollable-content {
             width: 100%;
             height: 100%;
-            padding: 70px var(--space-xl) 70px 149px;
+            padding: var(--sidebar-menu-height) var(--space-xl) 70px 149px;
             overflow-y: auto;
             .screen-content__header {
                 display: flex;
@@ -109,8 +109,8 @@
     .layout-screen {
         .screen-content {
             width: 100%;
-            height: calc(100% - 70px);
-            margin-top: 70px;
+            height: calc(100% - var(--sidebar-menu-height));
+            margin-top: var(--sidebar-menu-height);
             border-radius: var(--border-radius-none);
 
             .scrollable-content {

@@ -420,11 +420,11 @@
 
             &__content {
                 pointer-events: auto;
-                margin-top: 70px;
+                margin-top: var(--sidebar-menu-height);
                 box-shadow: 0px 0px 4px
                     color-mix(in srgb, var(--color-neutral-10) 20%, transparent);
                 transition: transform 0.3s ease-in-out;
-                height: calc(100% - 70px);
+                height: calc(100% - var(--sidebar-menu-height));
             }
 
             &__toggle {
@@ -461,8 +461,8 @@
 .phone {
     .layout-screen {
         .sidebar-info {
-            margin-top: 70px;
-            height: calc(100% - 70px);
+            margin-top: var(--sidebar-menu-height);
+            height: calc(100% - var(--sidebar-menu-height));
             background: var(--color-neutral-0);
             overflow-y: auto;
             pointer-events: auto;

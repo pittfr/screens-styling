@@ -183,7 +183,7 @@
         position: fixed;
         width: 100dvw;
         max-width: 100dvw;
-        height: 70px;
+        height: var(--sidebar-menu-height);
         border-radius: 0;
         transition: none;
 
