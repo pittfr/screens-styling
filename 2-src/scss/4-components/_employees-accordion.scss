@@ -206,7 +206,6 @@
 
                     > :nth-child(1) > :nth-child(2) {
                         grid-area: name;
-                        font-weight: var(--font-bold);
                     }
 
                     > :nth-child(2) {
@@ -230,6 +229,7 @@
 
                     > :nth-child(1) > :nth-child(2)::before {
                         content: "Name: ";
+                        font-weight: var(--font-bold);
                     }
 
                     > :nth-child(2)::before {
