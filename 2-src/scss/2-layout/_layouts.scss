@@ -108,18 +108,21 @@
         .screen-content {
             width: 100%;
             border-radius: var(--border-radius-none);
-            padding-left: var(--space-base);
-            padding-right: var(--space-base);
 
-            .search-controls {
-                flex-flow: column nowrap;
-                align-items: flex-start;
-                gap: var(--space-m);
-                margin-right: var(--space-none);
-                margin-bottom: var(--space-s);
+            .scrollable-content {
+                padding-left: var(--space-base);
+                padding-right: var(--space-base);
 
-                &__filters-btn {
-                    margin-left: auto;
+                .search-controls {
+                    flex-flow: column nowrap;
+                    align-items: flex-start;
+                    gap: var(--space-m);
+                    margin-right: var(--space-none);
+                    margin-bottom: var(--space-s);
+
+                    &__filters-btn {
+                        margin-left: auto;
+                    }
                 }
             }
         }
@@ -129,25 +132,26 @@
 .phone {
     .layout-screen {
         .screen-content {
-            &__header {
-                &__buttons {
-                    max-height: var(--space-none);
+            .scrollable-content {
+                .screen-content__header {
+                    &__buttons {
+                        max-height: var(--space-none);
 
-                    .btn,
-                    .btn-primary {
-                        white-space: nowrap;
-                    }
+                        .btn,
+                        .btn-primary {
+                            white-space: nowrap;
+                        }
 
-                    .btn + .btn {
-                        margin-top: var(--space-none);
-                        margin-left: var(--space-m);
+                        .btn + .btn {
+                            margin-top: var(--space-none);
+                            margin-left: var(--space-m);
+                        }
                     }
                 }
+                .search-controls {
+                    margin-left: var(--space-base);
+                }
             }
-        }
-
-        .search-controls {
-            margin-left: var(--space-base);
         }
     }
 }
