@@ -38,17 +38,45 @@
             transition: transform 0.3s ease-in-out;
         }
 
-        .burger {
+        .sidebar-menu__toggle-mobile {
             display: none;
             outline: 0;
             border: 0;
             background: transparent;
-            font-size: 30px;
             cursor: pointer;
             flex-flow: row nowrap;
             align-items: center;
             gap: 20px;
             color: var(--color-neutral-0);
+
+            &-icons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                width: 30px;
+                height: 30px;
+                overflow: hidden;
+            }
+
+            &-icon {
+                position: absolute;
+                font-size: 30px;
+                color: var(--color-neutral-0);
+                width: 100%;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+                transition: transform 0.3s ease-out;
+
+                &.icon-burger {
+                    transform: translateY(0);
+                }
+                &.icon-cross {
+                    font-size: 28px;
+                    transform: translateY(-100%);
+                }
+            }
 
             &-label {
                 display: none;
@@ -207,7 +235,7 @@
                 display: none;
             }
 
-            .burger {
+            .sidebar-menu__toggle-mobile {
                 display: flex;
 
                 &-label {
@@ -255,6 +283,7 @@
                             var(--color-primary) 20%,
                             transparent
                         );
+                        gap: var(--space-s);
                         transition: background 0.15s ease-in-out;
 
                         .icon {
@@ -279,12 +308,26 @@
         }
 
         &--expanded {
+            .osui-sidebar__header {
+                .sidebar-menu__toggle-mobile {
+                    &-icon {
+                        &.icon-burger {
+                            transform: translateY(100%);
+                        }
+                        &.icon-cross {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
             .osui-sidebar__content {
                 transform: translateY(0);
 
                 .sidebar-menu-nav-items {
-                    .OSBlockWidget .sidebar-menu-nav-item .label {
-                        transition-delay: 0s;
+                    .OSBlockWidget .sidebar-menu-nav-item {
+                        .label {
+                            transition-delay: 0s;
+                        }
                     }
                 }
             }
