@@ -121,19 +121,15 @@
             align-items: center;
             padding: 11px 0;
             border-radius: 19px;
-            background: var(--color-secondary-lightest);
+            background: var(--color-blue-lightest);
 
-            .OSBlockWidget {
-                display: contents;
-
-                &:not(:last-child) .sidebar-info__stat::after {
-                    content: "";
-                    position: absolute;
-                    right: 0;
-                    height: 100%;
-                    width: 1px;
-                    background: var(--color-secondary-lighter);
-                }
+            .sidebar-info__stat:not(:last-child)::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                height: 100%;
+                width: 1px;
+                background: var(--color-blue-lighter);
             }
 
             .sidebar-info__stat {
@@ -147,13 +143,13 @@
                 &-label {
                     font-size: var(--font-size-s);
                     font-weight: 500;
-                    color: var(--color-secondary-lighter);
+                    color: var(--color-blue-lighter);
                 }
 
                 &-value {
                     font-size: var(--font-size-h6);
                     font-weight: var(--font-bold);
-                    color: var(--color-secondary-light);
+                    color: var(--color-blue-light);
                 }
             }
         }
@@ -231,7 +227,7 @@
             &-week {
                 font-size: var(--font-size-s);
                 font-weight: 500;
-                color: var(--color-secondary-dark);
+                color: var(--color-blue-dark);
             }
 
             &-number {
@@ -242,12 +238,12 @@
 
             &--event {
                 .sidebar-info__day-number::after {
-                    background: var(--color-secondary);
+                    background: var(--color-blue);
                 }
             }
 
             &--active {
-                background: var(--color-secondary);
+                background: var(--color-blue);
             }
 
             &--disabled {
@@ -268,7 +264,7 @@
             &:hover:not(.sidebar-info__day--active):not(
                     .sidebar-info__day--disabled
                 ) {
-                background: var(--color-secondary-lighter);
+                background: var(--color-blue-lighter);
             }
 
             &--active:not(.sidebar-info__day--disabled),
@@ -301,7 +297,7 @@
             width: 100%;
             padding: 21px 75px 13px 25px;
             border-radius: 19px;
-            background: var(--color-secondary-lightest);
+            background: var(--color-blue-lightest);
             position: relative;
             overflow: hidden;
 
@@ -309,7 +305,7 @@
                 position: absolute;
                 bottom: -6px;
                 right: 0;
-                color: var(--color-secondary-lighter);
+                color: var(--color-blue-lighter);
             }
 
             &-link {
@@ -325,7 +321,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: var(--color-secondary-dark);
+                color: var(--color-blue-dark);
                 cursor: pointer;
                 font-size: var(--font-size-h3);
                 text-decoration: none;
@@ -345,14 +341,14 @@
 
                 &-title {
                     font-weight: var(--font-bold);
-                    color: var(--color-secondary-darkest);
+                    color: var(--color-blue-darkest);
                 }
 
                 &-subtitle {
                     margin-top: 13px;
                     font-weight: 500;
                     line-height: 24px;
-                    color: var(--color-secondary-darker);
+                    color: var(--color-blue-darker);
                 }
             }
 
@@ -486,8 +482,8 @@
             &__toggle-fab {
                 display: block;
                 position: fixed;
-                right: 60px;
-                bottom: 70px;
+                right: 30px;
+                bottom: 30px;
                 z-index: 1;
 
                 &-btn {
