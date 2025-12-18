@@ -40,47 +40,6 @@
                 margin-bottom: 20px;
                 margin-right: 14px;
 
-                &__search-bar {
-                    display: grid;
-                    grid-template-columns: 24px 1fr;
-                    gap: 6px;
-                    width: 95%;
-                    max-width: 514px;
-                    padding-bottom: var(--space-s);
-                    border-bottom: var(--border-size-m) solid #d4e3f0d9;
-                    align-items: center;
-
-                    &-btn {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: 24px;
-                        height: 24px;
-                        outline: 0;
-                        border: 0;
-                        font-size: var(--font-size-h5);
-                        background: transparent;
-                        color: var(--color-primary);
-                        letter-spacing: 0.25px;
-                        cursor: pointer;
-                    }
-
-                    &-input {
-                        width: 100%;
-                        outline: 0;
-                        border: 0;
-                        background: transparent;
-                        font-weight: 500;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-
-                        &::placeholder {
-                            color: #85a5c2;
-                        }
-                    }
-                }
-
                 &__filters-btn {
                     display: flex;
                     justify-content: flex-end;
