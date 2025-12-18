@@ -15,11 +15,21 @@
 .text-primary-darker   {color: var(--color-primary-darker);   }
 .text-primary-darkest  {color: var(--color-primary-darkest);  }
 
-.background-secondary { background-color: var(--color-secondary); }
-.background-secondary-lightest { background-color: var(--color-neutral-0); }
+.background-secondary          {background-color: var(--color-secondary);          }
+.background-secondary-lightest {background-color: var(--color-secondary-lightest); }
+.background-secondary-lighter  {background-color: var(--color-secondary-lighter);  }
+.background-secondary-light    {background-color: var(--color-secondary-light);    }
+.background-secondary-dark     {background-color: var(--color-secondary-dark);     }
+.background-secondary-darker   {background-color: var(--color-secondary-darker);   }
+.background-secondary-darkest  {background-color: var(--color-secondary-darkest);  }
 
-.text-secondary { color: var(--color-secondary); }
-.text-secondary-darker { color: var(--color-secondary); }
+.text-secondary          {color: var(--color-secondary);          }
+.text-secondary-lightest {color: var(--color-secondary-lightest); }
+.text-secondary-lighter  {color: var(--color-secondary-lighter);  }
+.text-secondary-light    {color: var(--color-secondary-light);    }
+.text-secondary-dark     {color: var(--color-secondary-dark);     }
+.text-secondary-darker   {color: var(--color-secondary-darker);   }
+.text-secondary-darkest  {color: var(--color-secondary-darkest);  }
 
 /* $6.2.2 - Styles - Colors - Extendend */
 .background-red-lightest { background-color: var(--color-red-lightest); }
