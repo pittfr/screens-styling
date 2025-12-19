@@ -163,12 +163,12 @@
         font-weight: var(--font-bold);
         color: var(--color-neutral-10);
     }
-}
 
-&.sidebar-info--collapsed {
-    .sidebar-info__toggle {
-        &-icon {
-            transform: rotate(-180deg);
+    &.sidebar-info--collapsed {
+        .sidebar-info__toggle {
+            &-icon {
+                transform: rotate(-180deg);
+            }
         }
     }
 }
