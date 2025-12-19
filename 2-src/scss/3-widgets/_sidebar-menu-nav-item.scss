@@ -1,78 +1,76 @@
-.layout-screen {
-    .osui-sidebar.sidebar-menu {
+.osui-sidebar.sidebar-menu {
+    .osui-sidebar__content {
+        .sidebar-menu-nav-items {
+            .OSBlockWidget {
+                .sidebar-menu-nav-item {
+                    display: flex;
+                    align-items: center;
+                    gap: var(--space-none);
+                    cursor: pointer;
+                    transition: gap 0.15s ease-in-out;
+
+                    &.sidebar-menu-nav-item--active,
+                    &:hover {
+                        .icon {
+                            background: #00113333;
+                        }
+                    }
+
+                    .icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: var(--space-xxl);
+                        height: var(--space-xxl);
+                        border-radius: 11px;
+                        background: transparent;
+                        font-size: var(--font-size-h4);
+                        transition: background 0.2s ease-in-out;
+
+                        &:first-child {
+                            display: contents;
+                        }
+                    }
+
+                    .label {
+                        display: block;
+                        font-weight: 500;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    &.sidebar-menu--collapsed {
         .osui-sidebar__content {
             .sidebar-menu-nav-items {
                 .OSBlockWidget {
                     .sidebar-menu-nav-item {
-                        display: flex;
-                        align-items: center;
-                        gap: var(--space-none);
-                        cursor: pointer;
-                        transition: gap 0.15s ease-in-out;
-
-                        &.sidebar-menu-nav-item--active,
-                        &:hover {
-                            .icon {
-                                background: #00113333;
-                            }
+                        .label {
+                            width: var(--space-none);
+                            opacity: 0;
+                            transition: width 0.2s ease-in-out,
+                                opacity 0.15s ease-in-out;
                         }
+                    }
+                }
+            }
+        }
+    }
 
-                        .icon {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            width: var(--space-xxl);
-                            height: var(--space-xxl);
-                            border-radius: 11px;
-                            background: transparent;
-                            font-size: var(--font-size-h4);
-                            transition: background 0.2s ease-in-out;
-
-                            &:first-child {
-                                display: contents;
-                            }
-                        }
+    &.sidebar-menu--expanded {
+        .osui-sidebar__content {
+            .sidebar-menu-nav-items {
+                .OSBlockWidget {
+                    .sidebar-menu-nav-item {
+                        gap: var(--space-s);
 
                         .label {
-                            display: block;
-                            font-weight: 500;
-                            overflow: hidden;
-                        }
-                    }
-                }
-            }
-        }
-
-        &.sidebar-menu--collapsed {
-            .osui-sidebar__content {
-                .sidebar-menu-nav-items {
-                    .OSBlockWidget {
-                        .sidebar-menu-nav-item {
-                            .label {
-                                width: var(--space-none);
-                                opacity: 0;
-                                transition: width 0.2s ease-in-out,
-                                    opacity 0.15s ease-in-out;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        &.sidebar-menu--expanded {
-            .osui-sidebar__content {
-                .sidebar-menu-nav-items {
-                    .OSBlockWidget {
-                        .sidebar-menu-nav-item {
-                            gap: var(--space-s);
-
-                            .label {
-                                width: 65%;
-                                opacity: 1;
-                                transition: width 0.5s ease-in-out,
-                                    opacity 0.5s ease-in-out;
-                            }
+                            width: 65%;
+                            opacity: 1;
+                            transition: width 0.5s ease-in-out,
+                                opacity 0.5s ease-in-out;
                         }
                     }
                 }
@@ -82,7 +80,7 @@
 }
 
 @for $i from 1 through 5 {
-    .layout-screen .osui-sidebar.sidebar-menu {
+    .osui-sidebar.sidebar-menu {
         &--collapsed {
             .osui-sidebar__content
                 .sidebar-menu-nav-items
@@ -106,7 +104,7 @@
 
 .tablet,
 .phone {
-    .layout-screen .osui-sidebar.sidebar-menu {
+    .osui-sidebar.sidebar-menu {
         .osui-sidebar__content {
             .sidebar-menu-nav-items .OSBlockWidget .sidebar-menu-nav-item {
                 flex-flow: column nowrap;
@@ -151,7 +149,7 @@
     }
 }
 
-// Component Styleguide's Preview
+// Widget's Styleguide Preview
 
 .layout-top {
     .pattern-preview-left {

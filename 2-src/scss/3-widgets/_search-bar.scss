@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 24px 1fr;
     gap: 6px;
+    width: 100%;
     max-width: 514px;
     padding-bottom: var(--space-s);
     padding-right: 64px;
@@ -36,5 +37,11 @@
         &::placeholder {
             color: #85a5c2;
         }
+    }
+}
+
+.layout-top .pattern-preview-left .pattern-preview-content {
+    .search-bar {
+        width: unset;
     }
 }

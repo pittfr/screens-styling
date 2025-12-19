@@ -1,4 +1,4 @@
-.layout-screen .osui-sidebar.sidebar-menu {
+.osui-sidebar.sidebar-menu {
     position: absolute;
     top: 0;
     left: 0;
@@ -118,7 +118,7 @@
 
 .tablet,
 .phone {
-    .layout-screen .osui-sidebar.sidebar-menu {
+    .osui-sidebar.sidebar-menu {
         position: fixed;
         width: 100dvw;
         max-width: 100dvw;
