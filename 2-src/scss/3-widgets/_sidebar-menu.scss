@@ -1,7 +1,6 @@
 .osui-sidebar.sidebar-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
+    transform: translateX(0px);
+    width: 112px;
     background: var(--color-primary);
     color: var(--color-neutral-0);
     z-index: 2;
@@ -104,7 +103,8 @@
         }
     }
 
-    &.sidebar-menu--expanded {
+    &.osui-sidebar--is-open {
+        width: 222px;
         .osui-sidebar__header {
             .app-logo {
                 max-width: 100%;
@@ -114,6 +114,10 @@
             }
         }
     }
+}
+
+.osui-sidebar.sidebar-menu:not(.osui-sidebar--is-open):not(.no-transition) {
+    opacity: 1;
 }
 
 .tablet,
@@ -189,7 +193,7 @@
             }
         }
 
-        &--expanded {
+        &.osui-sidebar--is-open {
             .osui-sidebar__header {
                 .sidebar-menu__toggle-mobile {
                     &-icon {

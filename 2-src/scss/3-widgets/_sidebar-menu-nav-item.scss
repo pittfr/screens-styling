@@ -26,40 +26,23 @@
                         background: transparent;
                         font-size: var(--font-size-h4);
                         transition: background 0.2s ease-in-out;
-
-                        &:first-child {
-                            display: contents;
-                        }
                     }
 
                     .label {
                         display: block;
+                        width: var(--space-none);
                         font-weight: 500;
                         overflow: hidden;
+                        opacity: 0;
+                        transition: width 0.2s ease-in-out,
+                            opacity 0.15s ease-in-out;
                     }
                 }
             }
         }
     }
 
-    &.sidebar-menu--collapsed {
-        .osui-sidebar__content {
-            .sidebar-menu-nav-items {
-                .OSBlockWidget {
-                    .sidebar-menu-nav-item {
-                        .label {
-                            width: var(--space-none);
-                            opacity: 0;
-                            transition: width 0.2s ease-in-out,
-                                opacity 0.15s ease-in-out;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.sidebar-menu--expanded {
+    &.osui-sidebar--is-open {
         .osui-sidebar__content {
             .sidebar-menu-nav-items {
                 .OSBlockWidget {
@@ -81,16 +64,14 @@
 
 @for $i from 1 through 5 {
     .osui-sidebar.sidebar-menu {
-        &--collapsed {
-            .osui-sidebar__content
-                .sidebar-menu-nav-items
-                .OSBlockWidget:nth-child(#{$i})
-                .sidebar-menu-nav-item
-                .label {
-                transition-delay: ((6 - $i) * 0.075s);
-            }
+        .osui-sidebar__content
+            .sidebar-menu-nav-items
+            .OSBlockWidget:nth-child(#{$i})
+            .sidebar-menu-nav-item
+            .label {
+            transition-delay: ((6 - $i) * 0.075s);
         }
-        &--expanded {
+        &.osui-sidebar--is-open {
             .osui-sidebar__content
                 .sidebar-menu-nav-items
                 .OSBlockWidget:nth-child(#{$i})
@@ -134,7 +115,7 @@
             }
         }
 
-        &--expanded {
+        &.osui-sidebar--is-open {
             .osui-sidebar__content {
                 transform: translateY(0);
 
