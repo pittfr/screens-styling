@@ -1,4 +1,4 @@
-.screen-content .employees-accordion {
+.employees-accordion {
     .sorting {
         display: flex;
         flex-flow: row nowrap;
@@ -189,17 +189,15 @@
                 }
             }
 
-            .items {
-                .osui-accordion-item {
-                    &__title__placeholder {
-                        > :nth-child(1) {
-                            width: 36%;
-                        }
+            .items .osui-accordion-item {
+                &__title__placeholder {
+                    > :nth-child(1) {
+                        width: 36%;
+                    }
 
-                        > :nth-child(4) {
-                            margin-left: auto;
-                            margin-right: 36px;
-                        }
+                    > :nth-child(4) {
+                        margin-left: auto;
+                        margin-right: 36px;
                     }
                 }
             }
@@ -209,76 +207,74 @@
 
 .tablet,
 .phone {
-    .screen-content .employees-accordion {
+    .employees-accordion {
         .sorting {
             opacity: 0;
             max-height: var(--space-none);
             cursor: default;
             pointer-events: none;
         }
-        .items {
-            .osui-accordion-item {
-                &__title__placeholder {
-                    display: grid;
-                    grid-template-areas: "image name city state actions";
-                    grid-template-columns: auto repeat(3, 1fr) auto;
-                    justify-content: flex-start;
-                    font-weight: 500;
+        .items .osui-accordion-item {
+            &__title__placeholder {
+                display: grid;
+                grid-template-areas: "image name city state actions";
+                grid-template-columns: auto repeat(3, 1fr) auto;
+                justify-content: flex-start;
+                font-weight: 500;
 
-                    > :nth-child(1),
-                    > :nth-child(2),
-                    > :nth-child(3),
-                    > :nth-child(4) {
-                        max-width: unset;
-                        width: unset;
-                    }
+                > :nth-child(1),
+                > :nth-child(2),
+                > :nth-child(3),
+                > :nth-child(4) {
+                    max-width: unset;
+                    width: unset;
+                }
 
-                    > :nth-child(1) {
-                        display: contents;
-                    }
+                > :nth-child(1) {
+                    display: contents;
+                }
 
-                    .employee-picture {
-                        grid-area: image;
-                        width: var(--space-xl);
-                        height: var(--space-xl);
-                        margin-right: var(--space-base);
-                    }
+                .employee-picture {
+                    grid-area: image;
+                    width: var(--space-xl);
+                    height: var(--space-xl);
+                    margin-right: var(--space-base);
+                }
 
-                    > :nth-child(1) > :nth-child(2) {
-                        grid-area: name;
-                    }
+                > :nth-child(1) > :nth-child(2) {
+                    grid-area: name;
+                }
 
-                    > :nth-child(2) {
-                        grid-area: state;
-                    }
+                > :nth-child(2) {
+                    grid-area: state;
+                }
 
-                    > :nth-child(3) {
-                        grid-area: city;
-                    }
+                > :nth-child(3) {
+                    grid-area: city;
+                }
 
-                    > :nth-child(4) {
-                        grid-area: actions;
-                        justify-self: end;
-                        margin-right: var(--space-base);
-                    }
+                > :nth-child(4) {
+                    grid-area: actions;
+                    justify-self: end;
+                    margin-right: var(--space-base);
+                }
 
-                    > :nth-child(2)::before,
-                    > :nth-child(3)::before {
-                        font-weight: var(--font-semi-bold);
-                    }
+                > :nth-child(2)::before,
+                > :nth-child(3)::before {
+                    font-weight: var(--font-semi-bold);
+                }
 
-                    > :nth-child(1) > :nth-child(2)::before {
-                        content: "Name: ";
-                        font-weight: var(--font-bold);
-                    }
+                > :nth-child(1) > :nth-child(2)::before {
+                    content: "Name: ";
+                    font-weight: var(--font-bold);
+                }
 
-                    > :nth-child(2)::before {
-                        content: "State: ";
-                    }
+                > :nth-child(2)::before {
+                    content: "State: ";
+                }
 
-                    > :nth-child(3)::before {
-                        content: "City: ";
-                    }
+                > :nth-child(3)::before {
+                    content: "City: ";
                 }
             }
         }
@@ -286,7 +282,7 @@
 }
 
 .phone {
-    .screen-content .employees-accordion {
+    .employees-accordion {
         .items {
             .osui-accordion-item {
                 &__title__placeholder {
@@ -333,299 +329,7 @@
 // Component's Styleguide Preview
 
 .layout-top .pattern-preview-left .pattern-preview-content {
-    .employees-accordion {
-        .sorting {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-            font-size: var(--font-size-s);
-            color: var(--color-neutral-9);
-            padding-left: var(--space-base);
-            padding-right: calc(var(--space-l) - 6px);
-            max-height: var(--space-xl);
-            opacity: 1;
-            overflow: hidden;
-            transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
-
-            .btn {
-                background-color: transparent;
-                border: var(--border-size-none);
-                color: inherit;
-                font-weight: var(--font-regular);
-                padding: var(--space-none);
-            }
-
-            > :nth-child(1),
-            > :nth-child(2),
-            > :nth-child(3) {
-                max-width: 280px;
-                width: 23%;
-            }
-            > :nth-child(4) {
-                margin: 0 auto;
-            }
-        }
-
-        .items {
-            display: flex;
-            flex-flow: column nowrap;
-            gap: var(--space-s);
-            overflow-y: auto;
-
-            .osui-accordion-item {
-                border-width: var(--border-size-none);
-                border-radius: 16px;
-                box-shadow: var(--shadow-xs);
-                overflow: hidden;
-                border: var(--border-size-m) solid transparent;
-                transition: border 0.3s ease-in-out;
-
-                &__title {
-                    transition: background 0.3s ease-in-out,
-                        box-shadow 0.3s ease-in-out;
-                    border-radius: 16px;
-                    padding: var(--space-base);
-                }
-
-                &__title__placeholder {
-                    display: flex;
-                    flex-flow: row nowrap;
-                    align-items: center;
-                    font-size: var(--font-size-s);
-
-                    > :nth-child(1) {
-                        max-width: 280px;
-                        width: 23%;
-
-                        .employee-picture {
-                            width: var(--space-l);
-                            height: var(--space-l);
-                            border-radius: var(--border-radius-circle);
-                            border: var(--border-size-m) solid
-                                var(--color-neutral-0);
-                        }
-                    }
-                    > :nth-child(2),
-                    > :nth-child(3) {
-                        max-width: 280px;
-                        width: 23%;
-                    }
-                    > :nth-child(4) {
-                        margin: 0 auto;
-
-                        > :first-child {
-                            width: 50px;
-                            text-align: center;
-                            padding: 6px var(--space-none);
-                            border-radius: var(--border-radius-rounded);
-                            font-size: var(--font-size-xs);
-                            transition: color 0.3s ease-in-out,
-                                background 0.3s ease-in-out;
-
-                            &.active {
-                                background: var(--color-green-lightest);
-                                color: var(--color-success);
-                            }
-
-                            &.inactive {
-                                width: 60px;
-                                background: var(--color-red-lightest);
-                                color: var(--color-error);
-                            }
-                        }
-                    }
-                }
-
-                &__content {
-                    background: var(--color-neutral-0);
-                }
-
-                .accordion-inner-wrapper {
-                    display: flex;
-                    flex-flow: row nowrap;
-                    justify-content: space-between;
-                    padding-top: 26px;
-                    color: var(--color-neutral-9);
-                    font-size: var(--font-size-s);
-
-                    > :nth-child(1) {
-                        width: 45%;
-                        max-width: 514px;
-                    }
-
-                    > :nth-child(2) {
-                        width: 55%;
-                        max-width: 660px;
-                    }
-
-                    .contact-wrapper {
-                        display: flex;
-                        flex-flow: row nowrap;
-                        align-items: center;
-                        gap: var(--space-xs);
-                        color: var(--color-info);
-                    }
-                }
-
-                &--is-open {
-                    border-color: var(--color-neutral-2);
-                    > .osui-accordion-item__title {
-                        font-weight: 500;
-                        background-color: var(--color-neutral-3);
-                        box-shadow: var(--shadow-xs);
-                    }
-
-                    &::after {
-                        border: var(--border-size-none);
-                    }
-
-                    .osui-accordion-item__title__placeholder
-                        > :nth-child(4)
-                        > :first-child {
-                        &.active {
-                            background: var(--color-success);
-                            color: var(--color-green-lightest);
-                        }
-                        &.inactive {
-                            background: var(--color-error);
-                            color: var(--color-red-lightest);
-                        }
-                    }
-                }
-
-                &--is-closed {
-                    .osui-accordion-item__icon--caret {
-                        color: var(--color-neutral-10);
-                    }
-                }
-            }
-        }
-    }
-}
-
-.tablet,
-.phone {
-    .layout-top .pattern-preview-left .pattern-preview-content {
-        .employees-accordion {
-            .sorting {
-                opacity: 0;
-                max-height: var(--space-none);
-                cursor: default;
-                pointer-events: none;
-            }
-            .items {
-                .osui-accordion-item {
-                    &__title__placeholder {
-                        display: grid;
-                        grid-template-areas: "image name city state actions";
-                        grid-template-columns: auto repeat(3, 1fr) auto;
-                        justify-content: flex-start;
-                        font-weight: 500;
-
-                        > :nth-child(1),
-                        > :nth-child(2),
-                        > :nth-child(3),
-                        > :nth-child(4) {
-                            max-width: unset;
-                            width: unset;
-                        }
-
-                        > :nth-child(1) {
-                            display: contents;
-                        }
-
-                        .employee-picture {
-                            grid-area: image;
-                            width: var(--space-xl);
-                            height: var(--space-xl);
-                            margin-right: var(--space-base);
-                        }
-
-                        > :nth-child(1) > :nth-child(2) {
-                            grid-area: name;
-                        }
-
-                        > :nth-child(2) {
-                            grid-area: state;
-                        }
-
-                        > :nth-child(3) {
-                            grid-area: city;
-                        }
-
-                        > :nth-child(4) {
-                            grid-area: actions;
-                            justify-self: end;
-                            margin-right: var(--space-base);
-                        }
-
-                        > :nth-child(2)::before,
-                        > :nth-child(3)::before {
-                            font-weight: var(--font-semi-bold);
-                        }
-
-                        > :nth-child(1) > :nth-child(2)::before {
-                            content: "Name: ";
-                            font-weight: var(--font-bold);
-                        }
-
-                        > :nth-child(2)::before {
-                            content: "State: ";
-                        }
-
-                        > :nth-child(3)::before {
-                            content: "City: ";
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.phone {
-    .layout-top .pattern-preview-left .pattern-preview-content {
-        .employees-accordion {
-            .items {
-                .osui-accordion-item {
-                    &__title__placeholder {
-                        display: grid;
-                        grid-template-areas:
-                            "image name actions"
-                            "image city actions"
-                            "image state actions";
-                        grid-template-columns: auto 1fr auto;
-
-                        > :nth-child(1) > :nth-child(2) {
-                            margin-bottom: var(--space-s);
-                        }
-
-                        > :nth-child(3) {
-                            margin-bottom: var(--space-xs);
-                        }
-
-                        > :nth-child(1) {
-                            font-weight: var(--font-semi-bold);
-                        }
-
-                        > :nth-child(2),
-                        > :nth-child(3) {
-                            font-size: var(--font-size-xs);
-                        }
-                    }
-
-                    .accordion-inner-wrapper {
-                        flex-flow: column nowrap;
-                        gap: 26px;
-
-                        > :nth-child(1),
-                        > :nth-child(2) {
-                            width: 100%;
-                            max-width: unset;
-                        }
-                    }
-                }
-            }
-        }
+    .OSBlockWidget[data-block="Content.Accordion"] {
+        display: block;
     }
 }
