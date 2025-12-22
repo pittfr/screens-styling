@@ -1,63 +1,55 @@
 .osui-sidebar.sidebar-menu {
-    .osui-sidebar__content {
-        .sidebar-menu-nav-items {
-            .OSBlockWidget {
-                .sidebar-menu-nav-item {
-                    display: flex;
-                    align-items: center;
-                    gap: var(--space-none);
-                    cursor: pointer;
-                    transition: gap 0.15s ease-in-out;
+    .osui-sidebar__content
+        .sidebar-menu-nav-items
+        .OSBlockWidget
+        .sidebar-menu-nav-item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-none);
+        cursor: pointer;
+        word-break: keep-all;
+        transition: gap 0.15s ease-in-out;
 
-                    &.sidebar-menu-nav-item--active,
-                    &:hover {
-                        .icon {
-                            background: #00113333;
-                        }
-                    }
-
-                    .icon {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: var(--space-xxl);
-                        height: var(--space-xxl);
-                        border-radius: 11px;
-                        background: transparent;
-                        font-size: var(--font-size-h4);
-                        transition: background 0.2s ease-in-out;
-                    }
-
-                    .label {
-                        display: block;
-                        width: var(--space-none);
-                        font-weight: 500;
-                        overflow: hidden;
-                        opacity: 0;
-                        transition: width 0.2s ease-in-out,
-                            opacity 0.15s ease-in-out;
-                    }
-                }
+        &.sidebar-menu-nav-item--active,
+        &:hover {
+            .icon {
+                background: #00113333;
             }
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: var(--space-xxl);
+            height: var(--space-xxl);
+            border-radius: 11px;
+            background: transparent;
+            font-size: var(--font-size-h4);
+            transition: background 0.2s ease-in-out;
+        }
+
+        .label {
+            display: block;
+            width: var(--space-none);
+            font-weight: 500;
+            overflow: hidden;
+            opacity: 0;
+            transition: width 0.2s ease-in-out, opacity 0.15s ease-in-out;
         }
     }
 
-    &.osui-sidebar--is-open {
-        .osui-sidebar__content {
-            .sidebar-menu-nav-items {
-                .OSBlockWidget {
-                    .sidebar-menu-nav-item {
-                        gap: var(--space-s);
+    &.osui-sidebar--is-open
+        .osui-sidebar__content
+        .sidebar-menu-nav-items
+        .OSBlockWidget
+        .sidebar-menu-nav-item {
+        gap: var(--space-s);
 
-                        .label {
-                            width: 65%;
-                            opacity: 1;
-                            transition: width 0.5s ease-in-out,
-                                opacity 0.5s ease-in-out;
-                        }
-                    }
-                }
-            }
+        .label {
+            width: 65%;
+            opacity: 1;
+            transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
         }
     }
 }
@@ -132,44 +124,43 @@
 
 // Widget's Styleguide Preview
 
-.layout-top {
-    .pattern-preview-left {
-        .pattern-preview-content {
-            .sidebar-menu-nav-item {
-                display: flex;
-                align-items: center;
-                gap: var(--space-s);
-                cursor: pointer;
-                transition: gap 0.15s ease-in-out;
+.layout-top .pattern-preview-content {
+    .sidebar-menu-nav-item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-s);
+        cursor: pointer;
+        transition: gap 0.15s ease-in-out;
 
-                &.sidebar-menu-nav-item--active,
-                &:hover {
-                    .icon {
-                        background: #00113333;
-                    }
-                }
+        &.sidebar-menu-nav-item--active,
+        &:hover {
+            .icon {
+                background: #00113333;
+            }
+        }
 
-                .icon {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: var(--space-xxl);
-                    height: var(--space-xxl);
-                    border-radius: 11px;
-                    background: transparent;
-                    font-size: var(--font-size-h4);
-                    transition: background 0.2s ease-in-out;
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: var(--space-xxl);
+            height: var(--space-xxl);
+            border-radius: 11px;
+            background: transparent;
+            font-size: var(--font-size-h4);
+            transition: background 0.2s ease-in-out;
 
-                    :first-child {
-                        display: contents;
-                    }
-                }
+            :first-child {
+                display: contents;
+            }
+        }
 
-                .label {
-                    display: block;
-                    font-weight: 500;
-                    overflow: hidden;
-                }
+        .label {
+            display: block;
+            font-weight: 500;
+            overflow: hidden;
+            &.ph:empty {
+                display: none;
             }
         }
     }
@@ -177,35 +168,31 @@
 
 .tablet,
 .phone {
-    .layout-top {
-        .pattern-preview-left {
-            .pattern-preview-content {
-                .sidebar-menu-nav-item {
-                    flex-flow: column nowrap;
-                    padding: var(--space-base);
-                    border: 2px solid #0011331a;
-                    border-radius: 16px;
-                    background: color-mix(
-                        in srgb,
-                        var(--color-neutral-6) 20%,
-                        transparent
-                    );
-                    gap: var(--space-s);
-                    transition: background 0.15s ease-in-out;
+    .layout-top .pattern-preview-content {
+        .sidebar-menu-nav-item {
+            flex-flow: column nowrap;
+            padding: var(--space-base);
+            border: 2px solid #0011331a;
+            border-radius: 16px;
+            background: color-mix(
+                in srgb,
+                var(--color-neutral-6) 20%,
+                transparent
+            );
+            gap: var(--space-s);
+            transition: background 0.15s ease-in-out;
 
-                    .icon {
-                        background: #0011331a;
-                    }
+            .icon {
+                background: #0011331a;
+            }
 
-                    &.sidebar-menu-nav-item--active,
-                    &:hover {
-                        background: #00113333;
-                    }
+            &.sidebar-menu-nav-item--active,
+            &:hover {
+                background: #00113333;
+            }
 
-                    .label {
-                        width: unset;
-                    }
-                }
+            .label {
+                width: unset;
             }
         }
     }
