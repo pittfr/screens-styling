@@ -6,7 +6,6 @@
     width: 390px;
     height: 100%;
     transform: translateX(100%);
-    padding: var(--space-xl) var(--space-l);
     background: var(--color-neutral-0);
     z-index: 2;
     transition: transform 0.3s ease-in-out;
@@ -31,7 +30,8 @@
                 align-items: center;
                 flex-flow: column nowrap;
                 gap: var(--space-m);
-                padding: var(--space-none);
+                padding: var(--space-xl) var(--space-l);
+                overflow-y: auto;
             }
 
             &__toggle {
@@ -243,7 +243,7 @@
         transition: transform 0.3s ease-in-out;
         height: calc(100% - var(--sidebar-menu-height));
 
-        &__toggle {
+        .sidebar-info__toggle {
             top: 142px;
 
             &-btn {
@@ -267,7 +267,7 @@
         transition: transform 0.3s ease-in-out;
         overflow-y: auto;
 
-        &__toggle {
+        .sidebar-info__toggle {
             display: none;
         }
     }
@@ -286,6 +286,42 @@
                     transform: translateX(0);
                 }
             }
+        }
+    }
+}
+
+// Component's Styleguide Preview
+
+.layout-top .osui-sidebar.sidebar-info {
+    padding-top: 56px;
+    box-shadow: 0px 0px 4px
+        color-mix(in srgb, var(--color-neutral-10) 20%, transparent);
+
+    .osui-sidebar__content {
+        display: contents;
+
+        .sidebar-info__toggle {
+            top: 128px;
+            &-btn {
+                box-shadow: 0px 0px 4px
+                    color-mix(in srgb, var(--color-neutral-10) 20%, transparent);
+            }
+        }
+    }
+}
+
+.tablet,
+.phone {
+    .layout-top .osui-sidebar.sidebar-info {
+        margin-top: var(--space-none);
+        height: 100%;
+    }
+}
+
+.phone {
+    .layout-top .osui-sidebar.sidebar-info {
+        .sidebar-info__content {
+            overflow-y: unset;
         }
     }
 }
