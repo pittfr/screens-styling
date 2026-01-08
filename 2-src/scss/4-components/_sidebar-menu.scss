@@ -120,6 +120,23 @@
     opacity: 1;
 }
 
+@for $i from 1 through 5 {
+    .osui-sidebar.sidebar-menu {
+        .sidebar-menu-nav-items
+            .OSBlockWidget:nth-child(#{$i})
+            .nav-item-label {
+            transition-delay: ((6 - $i) * 0.075s);
+        }
+        &.osui-sidebar--is-open {
+            .sidebar-menu-nav-items
+                .OSBlockWidget:nth-child(#{$i})
+                .nav-item-label {
+                transition-delay: ($i * 0.075s) + 0.05s;
+            }
+        }
+    }
+}
+
 .tablet,
 .phone {
     .osui-sidebar.sidebar-menu {
@@ -204,6 +221,13 @@
                             transform: translateY(0);
                         }
                     }
+                }
+            }
+            .osui-sidebar__content {
+                transform: translateY(0);
+
+                .sidebar-menu-nav-items .nav-item-label {
+                    transition-delay: 0s;
                 }
             }
         }
