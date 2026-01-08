@@ -1,10 +1,8 @@
-.sidebar-info {
-    &__calendar {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        width: 100%;
-    }
+.calendar {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
 
     &__month {
         display: flex;
@@ -82,7 +80,7 @@
         }
 
         &--event {
-            .sidebar-info__day-number::after {
+            .calendar__day-number::after {
                 background: var(--color-blue);
             }
         }
@@ -94,33 +92,31 @@
         &--disabled {
             cursor: default;
 
-            .sidebar-info__day-week,
-            .sidebar-info__day-number {
+            .calendar__day-week,
+            .calendar__day-number {
                 color: var(--color-neutral-4);
             }
 
-            &.sidebar-info__day--event {
-                .sidebar-info__day-number::after {
+            &.calendar__day--event {
+                .calendar__day-number::after {
                     background: var(--color-neutral-4);
                 }
             }
         }
 
-        &:hover:not(.sidebar-info__day--active):not(
-                .sidebar-info__day--disabled
-            ) {
+        &:hover:not(.calendar__day--active):not(.calendar__day--disabled) {
             background: var(--color-blue-lighter);
         }
 
-        &--active:not(.sidebar-info__day--disabled),
-        &:hover:not(.sidebar-info__day--disabled) {
-            .sidebar-info__day-week,
-            .sidebar-info__day-number {
+        &--active:not(.calendar__day--disabled),
+        &:hover:not(.calendar__day--disabled) {
+            .calendar__day-week,
+            .calendar__day-number {
                 color: var(--color-neutral-0);
             }
 
-            &.sidebar-info__day--event {
-                .sidebar-info__day-number::after {
+            &.calendar__day--event {
+                .calendar__day-number::after {
                     background: var(--color-neutral-0);
                 }
             }
@@ -130,10 +126,8 @@
 
 // Widget's Styleguide Preview
 
-.layout-top .pattern-preview-content {
-    .sidebar-info {
-        &__calendar {
-            max-width: 350px;
-        }
+.pattern-preview-left .pattern-preview-content {
+    .calendar {
+        max-width: 350px;
     }
 }
