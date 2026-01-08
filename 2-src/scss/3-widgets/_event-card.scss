@@ -1,4 +1,4 @@
-.sidebar-info__event {
+.event-card {
     width: 100%;
     max-width: 350px;
     padding: 21px 75px 13px 25px;
@@ -33,6 +33,10 @@
         font-size: var(--font-size-h3);
         text-decoration: none;
         z-index: 2;
+
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     &__content {
@@ -77,24 +81,23 @@
         background: #4263eb;
         box-shadow: 0px 2px 4px #0000001a;
 
-        .sidebar-info__event-icon {
+        .event-card-icon {
             top: 0;
             right: 28px;
         }
 
-        .sidebar-info__event-link {
+        .event-card-link {
             color: #2e45a4;
-            text-decoration: none;
         }
 
-        .sidebar-info__event__content {
+        .event-card__content {
             &-title,
             &-subtitle {
                 color: var(--color-neutral-0);
             }
         }
 
-        .sidebar-info__event__footer {
+        .event-card__footer {
             border-top-color: color-mix(
                 in srgb,
                 var(--color-neutral-0) 30%,
