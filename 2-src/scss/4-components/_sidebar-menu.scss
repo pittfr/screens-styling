@@ -223,13 +223,12 @@
 
 // Component's Styleguide Preview
 
-.layout-top
-    .OSBlockWidget[data-block="PatternsSidebarMenu.SidebarMenu"]
-    .pattern-preview-full-height {
+.OSBlockWidget[data-block="Custom.SidebarMenu"]
+    .pattern-preview.pattern-preview.pattern-preview-full-height {
     min-height: 800px;
 }
 
-.layout-top .osui-sidebar.sidebar-menu {
+.pattern-preview-left .pattern-preview-content .osui-sidebar.sidebar-menu {
     position: absolute;
 
     .OSBlockWidget {
@@ -246,7 +245,7 @@
 
 .tablet,
 .phone {
-    .osui-sidebar.sidebar-menu {
+    .pattern-preview-left .pattern-preview-content .osui-sidebar.sidebar-menu {
         position: absolute;
         width: 100%;
         max-width: 100%;
