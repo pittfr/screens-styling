@@ -1,0 +1,107 @@
+.nav-item {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    gap: var(--space-none);
+    cursor: pointer;
+    word-break: keep-all;
+    transition: gap 0.15s ease-in-out;
+
+    &.nav-item--active,
+    &:hover {
+        .nav-item-icon {
+            background: #00113333;
+        }
+    }
+
+    &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: var(--space-xxl);
+        height: var(--space-xxl);
+        border-radius: 11px;
+        background: transparent;
+        font-size: var(--font-size-h4);
+        transition: background 0.2s ease-in-out;
+    }
+
+    &-label {
+        display: block;
+        max-width: 90px;
+        width: var(--space-none);
+        font-weight: 500;
+        overflow: hidden;
+        opacity: 0;
+        transition: width 0.2s ease-in-out, opacity 0.15s ease-in-out;
+    }
+}
+
+.osui-sidebar--is-open .nav-item,
+.nav-item.nav-item--expanded {
+    gap: var(--space-s);
+
+    .nav-item-label {
+        width: 100%;
+        opacity: 1;
+        transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+}
+
+.tablet,
+.phone {
+    .nav-item {
+        flex-flow: column nowrap;
+        padding: var(--space-base);
+        border: 2px solid #0011331a;
+        border-radius: 16px;
+        background: color-mix(in srgb, var(--color-primary) 20%, transparent);
+        gap: var(--space-s);
+        transition: background 0.15s ease-in-out;
+
+        &-icon {
+            background: #0011331a;
+        }
+
+        &.nav-item--active,
+        &:hover {
+            background: #00113333;
+        }
+
+        &-label {
+            width: unset;
+        }
+    }
+}
+
+// Widget's Styleguide Preview
+
+.pattern-preview-left .pattern-preview-content {
+    .nav-item {
+        &-icon {
+            :first-child {
+                display: contents;
+            }
+        }
+    }
+}
+
+.tablet,
+.phone {
+    .pattern-preview-left .pattern-preview-content {
+        .nav-item {
+            background: color-mix(
+                in srgb,
+                var(--color-neutral-6) 20%,
+                transparent
+            );
+        }
+        .osui-sidebar.sidebar-menu .nav-item {
+            background: color-mix(
+                in srgb,
+                var(--color-primary) 20%,
+                transparent
+            );
+        }
+    }
+}
