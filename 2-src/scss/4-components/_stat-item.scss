@@ -1,0 +1,33 @@
+.stat-item {
+    display: grid;
+    max-width: 150px;
+    width: 100%;
+    grid-template-areas:
+        "icon label"
+        "icon content";
+    align-items: center;
+    font-weight: var(--font-bold);
+    color: var(--color-neutral-9);
+    column-gap: 7px;
+
+    &__icon {
+        grid-area: icon;
+        color: var(--color-neutral-5);
+
+        [class^="icon-"],
+        [class*=" icon-"],
+        [class^="icon-"] [class*="path"],
+        [class*=" icon-"] [class*="path"] {
+            font-weight: var(--font-semi-bold);
+        }
+    }
+
+    &-label {
+        grid-area: label;
+    }
+
+    .stat-item__content {
+        grid-area: content;
+        width: 100%;
+    }
+}
