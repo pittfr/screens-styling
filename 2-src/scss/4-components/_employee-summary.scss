@@ -1,0 +1,60 @@
+.employee-summary {
+    width: 100%;
+    max-width: 830px;
+    background: var(--color-neutral-0);
+    border-radius: 16px;
+
+    &__header {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: var(--space-s);
+        padding: 11px var(--space-m) var(--space-none) var(--space-s);
+
+        &__profile-card {
+            border-radius: var(--border-radius-none);
+            background: var(--color-neutral-0);
+            padding-right: var(--space-none);
+            max-width: 420px;
+            padding-bottom: var(--space-none);
+        }
+
+        &__controls {
+            display: flex;
+            flex-flow: column nowrap;
+            height: 80%;
+            gap: 28px;
+        }
+
+        &__controls .btn + .btn {
+            margin-left: var(--space-none);
+        }
+
+        &__buttons {
+            display: flex;
+            gap: var(--space-base);
+            justify-content: flex-end;
+        }
+
+        &__progress {
+            display: flex;
+            flex-flow: column nowrap;
+            font-weight: var(--font-bold);
+        }
+
+        &__progress-bar {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 11px;
+            align-items: center;
+        }
+    }
+
+    &__stats {
+        display: flex;
+        justify-content: space-between;
+        margin: var(--space-l) var(--space-m) 34px;
+        border-top: 1px solid var(--color-neutral-4);
+        padding-top: var(--space-l);
+    }
+}
